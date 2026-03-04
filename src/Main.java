@@ -1,23 +1,29 @@
 public class Main {
+
     public static void main(String[] args) {
-        System.out.println("Smart Parking System");
-        
-        // Creating a vehicle object
+
+        System.out.println("Smart Parking System Started");
+
+        ParkingLot parkingLot = new ParkingLot(3);
+
+        // Create vehicles
         Vehicle v1 = new Vehicle("KA01AB1234", "Car");
+        Vehicle v2 = new Vehicle("KA05CD5678", "Car");
+        Vehicle v3 = new Vehicle("KA09EF1111", "Bike");
 
-        // Creating a parking slot
-        ParkingSlot slot1 = new ParkingSlot(1);
+        // Park vehicles
+        parkingLot.parkVehicle(v1);
+        parkingLot.parkVehicle(v2);
+        parkingLot.parkVehicle(v3);
 
-        // Park vehicle
-        slot1.parkVehicle(v1);
-        
-        System.out.println("Vehicle parked in slot: " + slot1.getSlotNumber());
-        System.out.println("Is the slot occupied? " + slot1.isOccupied());
+        System.out.println("\nParking Status:");
+        parkingLot.displayStatus();
 
-        // Remove vehicle
-        slot1.removeVehicle();
+        // Remove vehicle from slot 2
+        System.out.println("\nRemoving vehicle from slot 2...");
+        parkingLot.removeVehicle(2);
 
-        System.out.println("Vehicle removed from slot: " + slot1.getSlotNumber());
-        System.out.println("Is the slot occupied? " + slot1.isOccupied());
+        System.out.println("\nParking Status After Removal:");
+        parkingLot.displayStatus();
     }
 }
