@@ -19,7 +19,8 @@ public class Main {
             System.out.println("1. Park Vehicle");
             System.out.println("2. Remove Vehicle");
             System.out.println("3. Show Parking Status");
-            System.out.println("4. Exit");
+            System.out.println("4. Find Vehicle");
+            System.out.println("5. Exit");
 
             System.out.print("Enter choice: ");
             int choice = scanner.nextInt();
@@ -50,18 +51,21 @@ public class Main {
 
             }
             else if (choice == 4) {
+                
+                System.out.print("Enter vehicle number to search: ");
+                String number = scanner.next();
+                parkingLot.findVehicle(number);
+            }
+            else if (choice == 5) {
 
                 System.out.println("Exiting program");
                 break;
-
             }
             else {
 
                 System.out.println("Invalid choice. Please enter valid choice");
-
             }
         }
-
         scanner.close();
     }
 }

@@ -67,4 +67,23 @@ public class ParkingLot {
                     " | Occupied: " + slot.isOccupied());
         }
     }
+
+    // To find Vehicle 
+    public void findVehicle(String vehicleNumber) {
+        
+        for (ParkingSlot slot : slots) {
+            
+            if (slot.isOccupied()) {
+
+                Vehicle vehicle = slot.getParkedVehicle();
+                
+                if (vehicle.getVehicleNumber().equalsIgnoreCase(vehicleNumber)) {
+
+                    System.out.println("Vehicle found in slot: " + slot.getSlotNumber());
+                    return;
+                }
+            }
+        }
+        System.out.println("Vehicle not found in parking lot.");
+    }
 }
