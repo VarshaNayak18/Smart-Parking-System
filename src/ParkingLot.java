@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class ParkingLot {
 
     private ArrayList<ParkingSlot> slots;
+    private double totalRevenue = 0;
 
     // Constructor
     public ParkingLot(int totalSlots) {
@@ -56,6 +57,7 @@ public class ParkingLot {
             }
             
             double fee = hours * rate;
+            totalRevenue += fee;
 
             System.out.println("Vehicle Number: " + vehicle.getVehicleNumber());
             System.out.println("Vehicle Type: " + vehicle.getVehicleType());
@@ -95,5 +97,8 @@ public class ParkingLot {
             }
         }
         System.out.println("Vehicle not found in parking lot.");
+    }
+    public void showTotalRevenue() {
+        System.out.println("Total Parking Revenue: ₹" + totalRevenue);
     }
 }

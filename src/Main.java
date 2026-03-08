@@ -20,7 +20,8 @@ public class Main {
             System.out.println("2. Remove Vehicle");
             System.out.println("3. Show Parking Status");
             System.out.println("4. Find Vehicle");
-            System.out.println("5. Exit");
+            System.out.println("5. Show Total Revenue");
+            System.out.println("6. Exit");
 
             System.out.print("Enter choice: ");
             int choice = scanner.nextInt();
@@ -57,6 +58,11 @@ public class Main {
                 parkingLot.findVehicle(number);
             }
             else if (choice == 5) {
+
+                parkingLot.showTotalRevenue();
+                break;
+            }
+            else if (choice == 6) {
 
                 System.out.println("Exiting program");
                 break;
