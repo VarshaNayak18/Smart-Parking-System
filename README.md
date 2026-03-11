@@ -29,14 +29,20 @@ The system simulates a real-world parking lot where users can park vehicles, rem
 
 ## 📂 Project Structure
 
+The core application logic is implemented inside the `src` directory using modular Java classes.
+
 ```
-SmartParkingSystem
+Smart-Parking-System
 │
-├── Main.java
-├── Vehicle.java
-├── ParkingSlot.java
-├── ParkingLot.java
-└── VehicleType.java
+├── src
+│   ├── Main.java
+│   ├── Vehicle.java
+│   ├── ParkingSlot.java
+│   ├── ParkingLot.java
+│   └── VehicleType.java
+│
+├── README.md
+└── .gitignore
 ```
 
 ## ⚙️ How It Works
@@ -56,7 +62,6 @@ SmartParkingSystem
 This project follows Object-Oriented Design:
 
 ````
-
 Vehicle
    │
    │ parked in
@@ -70,30 +75,54 @@ ParkingLot
    │ controlled by
    ▼
 Main (Menu System)
-
-``` id="19h2f6"
-
-## 📸 Example Output
-
-Example interaction with the system:
-
 ````
 
-Vehicle parked in slot: 1
-Entry Time: 2026-03-11 19:45:10 IST
+## ▶️ How to Run the Project
 
-Slot 1 | Car | KA01AB1234 | Parked at: 2026-03-11 19:45:10 IST
-Slot 2 | Empty
-Slot 3 | Bike | KA09XY8899 | Parked at: 2026-03-11 19:46:02 IST
+### Prerequisites
 
-```id="bnut1k"
+- Java JDK 17 or later
+- VS Code / IntelliJ / Eclipse (any Java IDE)
+
+### Steps
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/VarshaNayak18/smart-parking-management-system.git
+```
+
+2. Navigate to the project folder
+
+```bash
+cd smart-parking-management-system
+```
+
+3. Open the project in your preferred Java IDE.
+
+4. Run the program
+
+Run the **Main.java** file.
+
+5. Follow the console menu to interact with the parking system.
+
+```
+----- PARKING MENU -----
+
+1. Park Vehicle
+2. Remove Vehicle
+3. Show Parking Status
+4. Find Vehicle
+5. Show Total Revenue
+6. Exit
+```
 
 ## 🚀 Future Improvements
 
-- Add **GUI interface using JavaFX**
-- Store parking data using **MySQL database**
-- Build **REST API backend with Spring Boot**
-- Integrate **IoT-based parking sensors**
+- Add GUI interface using JavaFX
+- Store parking data using MySQL database
+- Build REST API backend with Spring Boot
+- Integrate IoT-based parking sensors
 
 
 
