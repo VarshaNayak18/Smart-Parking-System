@@ -6,10 +6,10 @@ import java.time.format.DateTimeFormatter;
 public class Vehicle {
 
     private String vehicleNumber;
-    private String vehicleType;
+    private VehicleType vehicleType;
     private long entryTime;
 
-    public Vehicle(String vehicleNumber, String vehicleType){
+    public Vehicle(String vehicleNumber, VehicleType vehicleType){
         this.vehicleNumber = vehicleNumber;
         this.vehicleType = vehicleType;
         this.entryTime = System.currentTimeMillis();
@@ -19,7 +19,7 @@ public class Vehicle {
         return vehicleNumber;
     }
 
-    public String getVehicleType(){
+    public VehicleType getVehicleType(){
         return vehicleType;
     }
 

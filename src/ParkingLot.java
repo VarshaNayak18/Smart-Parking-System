@@ -51,7 +51,7 @@ public class ParkingLot {
 
             double rate;
             
-            if (vehicle.getVehicleType().equalsIgnoreCase("Car")) {
+            if (vehicle.getVehicleType() == VehicleType.CAR) {
                 rate = 20;
             } else {
                 rate = 10;

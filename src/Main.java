@@ -32,13 +32,19 @@ public class Main {
                 String number = scanner.next();
 
                 System.out.print("Enter vehicle type (Car/Bike): ");
-                String type = scanner.next();
+                String typeInput = scanner.next().toUpperCase();
 
-                if (!type.equalsIgnoreCase("Car") && !type.equalsIgnoreCase("Bike")) {
-                    System.out.println("Invalid vehicle type. Only Car or Bike allowed.");
+                VehicleType type;
+                
+                if (typeInput.equals("CAR")) {
+                    type = VehicleType.CAR;
+                } else if (typeInput.equals("BIKE")) {
+                    type = VehicleType.BIKE;
+                } else {
+                    System.out.println("Invalid vehicle type. Only CAR or BIKE allowed.");
                     continue;
                 }
-
+                
                 Vehicle vehicle = new Vehicle(number, type);
                 parkingLot.parkVehicle(vehicle);
 
